@@ -1,16 +1,16 @@
 package main
 
 import (
-	"./design"
+	"./dataStruct"
+	"./linkedlist"
 	"fmt"
 )
 
 func main() {
-	s := design.NewRandomizedSet()
-	s.Insert(0)
-	s.Insert(1)
-	s.Remove(0)
-	s.Insert(2)
-	s.Remove(1)
-	fmt.Println(s.GetRandom())
+	head := &dataStruct.ListNode{Val: 1}
+	tail := &dataStruct.ListNode{Val: 2}
+	head.Next = tail
+	tail.Next = head
+	node := linkedlist.DetectCycle(head)
+	fmt.Println(node)
 }
