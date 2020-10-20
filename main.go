@@ -1,11 +1,13 @@
 package main
 
 import (
-	"./string"
+	"./dataStruct"
+	"./linkedlist"
 	"fmt"
 )
 
 func main() {
-	res := string.BackspaceCompare("ab#c", "ad#c")
+	head := &dataStruct.ListNode{Val: 1}
+	res := linkedlist.RecordList(head)
 	fmt.Println(res)
 }
